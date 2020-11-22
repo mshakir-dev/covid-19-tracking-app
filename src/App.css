@@ -1,38 +1,109 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Setup a variable */
+:root {
+  --h1-fontSize: 26px;
+  --h3-fontSize: 18px;
+  --p-fontSize: 16px;
+}
+body{
+  overflow-x: hidden;
+  background-color: #eee;
+}
+header {
+  background-color: #2c2e33;
+  border-bottom: 2px solid #E1DF1A;
+  color: #eee;
+  padding-top:5px;
+}
+
+header h1 {
   text-align: center;
+  font-size: var(--h1-fontSize);
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
+header p {
+  text-align: center;
+  font-size: var(--p-fontSize);
+}
+.covid-info-area {
+  background: #eee;
+  margin-top: 0px; }
+
+.covid-info .wrapper-covid-info {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: solid 4px transparent;
+  background: #fff;
+  padding: 20px 30px;
+  position: relative;
+  transition: all 0.5s ease 0s;
+  z-index: 9;
+  margin-top: 20px; 
+  border-bottom: 3px solid black;}
+
+.wrapper-covid-info.infected {
+  border-bottom: 5px solid #0194B6;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wrapper-covid-info.recovered {
+  border-bottom: 5px solid green;
+}
+.wrapper-covid-info.deaths {
+  border-bottom: 5px solid red;
+}
+.wrapper-covid-info h3 {
+  color: #0194B6; }
+
+.service-icon i {
+  font-size: 35px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  margin-bottom: 20px;
+  transition: all 0.5s;
+  border-radius: 50%;
+  border: solid 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer; }
+
+.wrapper-covid-info:hover .service-icon i {
+  background-color: #E1DF1A;
+  color: #fff;
+  border-color: #E1DF1A;
+  transform: rotate(360deg);
+  transition: all 0.5s ease-in; 
+  cursor: pointer;}
+.highlight {
+  font-weight: bold;
+  font-size: 19px;
+  letter-spacing: 2px;
+}
+select {
+  display: block;
+  margin: 0 auto;
+  background-color: #0194B6 !important;
+  color: #eee !important;
+  cursor: pointer;
+  line-height: 1.3;
+  border:1px solid #E1DF1A !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+select:hover {
+  box-shadow: none !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+select option {
+  color: #fff;
+  cursor: pointer !important;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.Chart {
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  color: #eee;
+  padding:15px;
+  margin-bottom: 15px;
 }
