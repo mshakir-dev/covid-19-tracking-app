@@ -13,3 +13,6 @@ The API is used to fetched all the data from 'https://covid19.mathdro.id/api'
 Final Output.
 
 ![](public/FinalOutput.JPG)
+
+Netlify Demo Link:
+https://mshakir-covid19.netlify.app/
